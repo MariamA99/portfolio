@@ -1,1 +1,213 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Learning to identify modulation formats from received signals in coherent and non-coherent communication systems."><title>Automatic Modulation Recognition | Research Portfolio</title><link rel="stylesheet" href="../style.css"></head><body><header class="topbar"><nav class="container nav" aria-label="Main navigation"><a class="logo" href="../index.html">Research<span>.</span>Portfolio</a><div class="navlinks"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div></nav></header><main class="page"><div class="container"><a class="back" href="../index.html#projects">← All projects</a><div class="eyebrow">Machine Learning · Communications</div><h1>Automatic Modulation Recognition</h1><p class="page-lede">Learning to identify modulation formats from received signals in coherent and non-coherent communication systems.</p><div class="tags"><span class="tag">CNN</span><span class="tag">BiLSTM</span><span class="tag">THz communications</span></div><img class="featured" src="../assets/amr.svg" alt="Illustrative modulation constellation graphic — replace with your own result"><p class="figcaption">Illustrative modulation constellation graphic — replace with your own result. Replace this graphic with your own figure before using the site as evidence of results.</p><div class="article"><div><section><h2>The challenge</h2><p>High-frequency communication links introduce impairments that complicate reliable modulation recognition across receiver conditions.</p></section><section><h2>What I worked on</h2><p>Developed and evaluated deep-learning models for automatic modulation recognition, including convolutional and recurrent architectures. Investigated coherent and non-coherent receiver settings and validated model behaviour using simulated and experimental measurements.</p></section><section><h2>Results and visuals</h2><p>Add your most representative accuracy/confusion-matrix figure here, together with the measurement conditions and the exact numbers you want to share.</p><div class="note"><strong>To customise:</strong> Put your image in the <code>assets</code> folder and change the image path above. Add your actual findings here, with units and conditions.</div></section><section><h2>Key takeaway</h2><p>Designing and experimentally assessing ML methods for an intelligent THz receiver.</p></section><section><h2>Publication or further reading</h2><p>Add a DOI, publication link, poster, or PDF if you have permission to share it. No source code is required.</p></section></div><aside class="sidebar"><h3>Project topics</h3><span class="tag">CNN</span><span class="tag">BiLSTM</span><span class="tag">THz communications</span><h3 style="margin-top:17px">Navigation</h3><a class="plainlink" href="../index.html#projects">← Back to portfolio</a></aside></div></div></main><footer><div class="container"><span>© <span id="year">2026</span> · Your Name · Research & Engineering</span><a class="plainlink" href="../index.html#projects">Explore projects ↑</a></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Learning to identify modulation formats from received signals in coherent and non-coherent communication systems."
+    >
+
+    <title>Automatic Modulation Recognition | Portfolio</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ======================================================
+         NAVIGATION BAR
+         ====================================================== -->
+
+    <header class="topbar">
+        <nav class="container nav" aria-label="Main navigation">
+
+            <a class="logo" href="../index.html">
+                Research & Industry Portfolio
+            </a>
+
+            <div class="navlinks">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ======================================================
+         MAIN PROJECT PAGE
+         ====================================================== -->
+
+    <main class="page">
+        <div class="container">
+
+            <!-- Back Navigation -->
+
+            <a class="back" href="../index.html#projects">
+                ← All projects
+            </a>
+
+
+            <!-- ==================================================
+                 PROJECT INTRODUCTION
+                 ================================================== -->
+
+            <div class="eyebrow">
+                Machine Learning · Communications
+            </div>
+
+            <h1>Automatic Modulation Recognition</h1>
+<!-- 
+            <p class="page-lede">
+                Learning to identify modulation formats from received
+                signals in coherent and non-coherent communication systems.
+            </p> -->
+
+
+            <!-- Project Tags -->
+
+            <div class="tags">
+                <span class="tag">CNN</span>
+                <span class="tag">BiLSTM</span>
+                <span class="tag">Terahertz Communications</span>
+            </div>
+
+
+            <!-- ==================================================
+                 FEATURED PROJECT IMAGE
+                 ================================================== -->
+
+            <img
+                class="featured"
+                src="../assets/AMR.svg"
+            >
+
+            <p class="figcaption">
+                Illustrative modulation constellation graphic — replace
+                with your own result. Replace this graphic with your own
+                figure before using the site as evidence of results.
+            </p>
+
+
+            <!-- ==================================================
+                 PROJECT ARTICLE AND SIDEBAR
+                 ================================================== -->
+
+            <div class="article">
+
+                <!-- Main Article Content -->
+
+                <div>
+                    <section>
+                        <h2>Abstract</h2>
+                        <p>
+                           Terahertz communications, enabled by photonics-based transceivers, offer ultra-wide bandwidths 
+                           and support dynamic multi-rate transmission, making adaptive modulation and automatic modulation 
+                           recognition (AMR) important capabilities for maintaining reliable link performance. However, despite 
+                           extensive AMR research in microwave and millimetre-wave systems, its application to terahertz communications 
+                           remains limited, particularly in experimental settings, where distinct propagation effects and hardware 
+                           impairments make reliable modulation recognition significantly more challenging. In this work, we investigate 
+                           deep learning-based AMR over experimental photonics-based terahertz links and assess the simulation-to-experimental 
+                           generalization of classifiers trained on simulated signals. A convolutional neural network (CNN) and bidirectional 
+                           long short-term memory (BiLSTM) model are trained on simulated complex-valued baseband signals and evaluated on 
+                           experimental non-coherent and coherent terahertz links. The results show successful transfer from simulation to 
+                           experiment, with the BiLSTM exhibiting greater robustness to phase offsets and IQ imbalance and reliable operation 
+                           over a broader range of data rates than the CNN.
+
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Publications and further reading</h2>
+
+                        <p>
+                            Part of this research has been published in the proceedings
+                            of the 2025 International Conference on Infrared, Millimeter,
+                            and Terahertz Waves (IRMMW-THz). An extended journal manuscript,
+                            incorporating further analysis and experimental validation,
+                            is currently under review.
+                        </p>
+
+                        <p>
+                            <strong>Conference Publication:</strong><br>
+
+                            <a
+                                class="plainlink"
+                                href="https://doi.org/10.1109/IRMMW-THz61557.2025.11320121"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Machine Learning for Multi-Modulation Classification
+                                in Terahertz Communications ↗
+                            </a>
+                        </p>
+                    </section>
+
+                </div>
+
+
+                <!-- ==================================================
+                     PROJECT SIDEBAR
+                     ================================================== -->
+
+                <aside class="sidebar">
+
+                    <h3>Project topics</h3>
+
+                    <span class="tag">CNN</span>
+                    <span class="tag">BiLSTM</span>
+                    <span class="tag">THz communications</span>
+
+
+                    <h3 style="margin-top: 17px;">
+                        Navigation
+                    </h3>
+
+                    <a class="plainlink" href="../index.html#projects">
+                        ← Back to portfolio
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
+
+    <footer>
+        <div class="container">
+
+            <span>
+                © <span id="year">2026</span> · Mariam Abdullah
+            </span>
+
+            <a class="plainlink" href="../index.html#projects">
+                Explore projects ↑
+            </a>
+
+        </div>
+    </footer>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+         ====================================================== -->
+
+    <script>
+        document.getElementById('year').textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Machine learning prediction of ionic liquid conductivity using graph neural networks and molecular features.">
+
+    <title>Ionic Liquid Conductivity Prediction | Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="topbar">
+        <nav class="container nav" aria-label="Main navigation">
+            <a class="logo" href="../index.html">
+                Research &amp; Industry Portfolio
+            </a>
+
+            <div class="navlinks">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main project page -->
+    <main class="page">
+        <div class="container">
+            <a class="back" href="../index.html#projects">← All projects</a>
+
+            <!-- Project introduction -->
+            <div class="eyebrow">Machine Learning · Materials Informatics</div>
+            <h1>Ionic Liquid Conductivity Prediction</h1>
+
+            <!-- Project tags -->
+            <div class="tags">
+                <span class="tag">Graph Neural Networks</span>
+                <span class="tag">Multilayer Perceptron</span>
+                <span class="tag">Regression</span>
+                <span class="tag">Molecular Features</span>
+                <span class="tag">Ionic Liquids</span>
+            </div>
+
+            <!-- Featured image: replace with your own approved project figure -->
+            <img
+                class="featured"
+                src="../assets/ILproperties.svg"
+                alt="Project figure for ionic liquid conductivity prediction"
+            >
+            <p class="figcaption">Prediction of properties of ionic liquids using graph neural networks.</p>
+
+            <!-- Article and sidebar -->
+            <div class="article">
+                <div>
+                    <!-- Research abstract -->
+                    <section id="abstract">
+                        <h2>Abstract</h2>
+                        <p>
+                            Predicting relevant ionic liquid (IL) properties such as ionic
+                            conductivity using machine learning is challenging because of the
+                            large and diverse chemical design space. This study investigates the
+                            influence of feature representation on predictive accuracy using a
+                            graph neural network and a multilayer perceptron trained on a dataset
+                            of 2,684 ionic liquids. Three feature sets are systematically compared:
+                            structural features learned through graph neural networks, molecular
+                            features, and a combination of structural and molecular features.
+                            Structural features alone outperform molecular features alone,
+                            highlighting the importance of chemical structure in characterising
+                            IL ionic conductivity. The best-performing model combines structural
+                            and molecular features, achieving a mean absolute error of 0.470,
+                            a root mean squared error of 0.677, and a coefficient of
+                            determination (R²) of 0.937. These findings demonstrate the
+                            importance of selecting complementary molecular and structural
+                            representations for accurate ionic liquid property prediction.
+                        </p>
+                    </section>
+
+                    <!-- Published research -->
+                    <section id="publications">
+                        <h2>Publications and further reading</h2>
+                        <p>
+                            This research has been published in a peer-reviewed journal.
+                            The full publication is linked below.
+                        </p>
+
+                        <h3>Journal publication</h3>
+                        <p class="publication-entry"><a class="plainlink" href="https://www.sciencedirect.com/science/article/pii/S0167732222021596" target="_blank" rel="noopener noreferrer">Comparison of molecular and structural features towards prediction of ionic liquid ionic conductivity for electrochemical applications ↗</a></p>
+                    </section>
+                </div>
+
+                <!-- Project sidebar -->
+                <aside class="sidebar">
+                    <h3>Project topics</h3>
+                    <span class="tag">Graph Neural Networks</span>
+                    <span class="tag">Multilayer Perceptron</span>
+                    <span class="tag">Regression</span>
+                    <span class="tag">Molecular Features</span>
+                    <span class="tag">Ionic Liquids</span>
+
+                    <h3 style="margin-top: 17px;">Navigation</h3>
+                    <a class="plainlink" href="../index.html#projects">
+                        ← Back to portfolio
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <span>© <span id="year">2026</span> · Mariam Abdullah</span>
+            <a class="plainlink" href="../index.html#projects">
+                Explore projects ↑
+            </a>
+        </div>
+    </footer>
+
+    <!-- Automatically update footer year -->
+    <script>
+        document.getElementById('year').textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="AIMES trial: Traffic Insights using Intelligent Fibre Sensing, exploring vehicle detection, tracking, classification and speed estimation using Telstra's optical fibre network."
+    >
+
+    <title>Intelligent Fibre Sensing | Portfolio</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ======================================================
+         NAVIGATION BAR
+         ====================================================== -->
+
+    <header class="topbar">
+        <nav class="container nav" aria-label="Main navigation">
+
+            <a class="logo" href="../index.html">
+                Research & Industry Portfolio
+            </a>
+
+            <div class="navlinks">
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ======================================================
+         MAIN PROJECT PAGE
+         ====================================================== -->
+
+    <main class="page">
+        <div class="container">
+
+            <!-- Back Navigation -->
+
+            <a class="back" href="../index.html#projects">
+                ← All projects
+            </a>
+
+
+            <!-- ==================================================
+                 PROJECT INTRODUCTION
+                 ================================================== -->
+
+            <div class="eyebrow">
+                Machine Learning · Intelligent Transport Systems
+            </div>
+
+            <h1>Traffic Insights using Intelligent Fibre Sensing</h1>
+
+            <p class="page-lede">
+                This project was conducted as part of the AIMES trial for
+                traffic insights using intelligent fibre sensing.
+                It explores the use of Telstra's existing optical fibre
+                footprint and technology to evaluate the usability of
+                Fibre Optic Sensing for inferring the location and
+                movements of vehicles on road corridors in real time.
+                The resulting data can support C-ITS applications or be
+                aggregated to inform infrastructure investment decisions.
+            </p>
+
+
+            <!-- Project Tags -->
+
+            <div class="tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Fibre Optic Sensing</span>
+                <span class="tag">Signal Processing</span>
+            </div>
+
+
+            <!-- ==================================================
+                 FEATURED PROJECT IMAGE
+                 ================================================== -->
+
+            <figure class="project-figure project-featured">
+                <img
+                    src="../assets/intelligent-fiber-sensing/intersection.gif"
+                    alt="Animated visualisation of vehicle movements at an intersection"
+                >
+
+                <figcaption>
+                    Traffic insights using intelligent fibre sensing.
+                </figcaption>
+            </figure>
+
+
+            <!-- ==================================================
+                 PROJECT ARTICLE AND SIDEBAR
+                 ================================================== -->
+
+            <div class="article">
+
+                <!-- Main Article Content -->
+
+                <div class="article-content">
+
+
+                    <!-- ==========================================
+                         PROJECT OVERVIEW
+                         ========================================== -->
+
+                    <section id="overview">
+
+                        <h2>Project Overview</h2>
+
+                        <p>
+                            This project aims to explore the utilisation of
+                            Telstra's existing optical fibre footprint and
+                            technology to evaluate the usability of Fibre
+                            Optic Sensing for inferring the location and
+                            movements of vehicles on the road corridor in
+                            real time, providing data that can be used for
+                            C-ITS purposes or aggregated to make investment
+                            decisions.
+                        </p>
+
+                        <p>
+                            The following traffic insights have been
+                            investigated with this technology:
+                        </p>
+
+                        <ul>
+                            <li>Vehicle Counting</li>
+                            <li>Vehicle Tracking</li>
+                            <li>Vehicle Speed Detection</li>
+                            <li>Vehicle Classification</li>
+                            <li>Ingress/Regress Vehicle Counting</li>
+                        </ul>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM ARCHITECTURE
+                         ========================================== -->
+
+                    <section id="architecture">
+
+                        <h2>Algorithm Architecture</h2>
+
+                        <p>
+                            Two different architectures are employed for
+                            vehicle position and speed tracking, as well
+                            as ingress/regress vehicle counting.
+                        </p>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1
+                         ========================================== -->
+
+                    <section id="algorithm-1">
+
+                        <h2>Algorithm 1</h2>
+
+                        <h3>
+                            Vehicle Position and Speed Tracking,
+                            Vehicle Classification, Vehicle Counting
+                        </h3>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/ProposedAlg.png"
+                                alt="Architecture of Algorithm 1 for vehicle position, speed tracking, classification and counting"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Algorithm 1: Vehicle position and speed
+                                tracking, classification and counting.
+                            </figcaption>
+
+                        </figure>
+
+                        <p>
+                            The complete algorithm used to track vehicle
+                            positions, speed, class identification and
+                            vehicle counting consists of six steps,
+                            as follows.
+                        </p>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1 - STEP 1
+                         ========================================== -->
+
+                    <section id="algorithm-1-step-1">
+
+                        <h3>Step 1: Process Time Window</h3>
+
+                        <p>
+                            Data is processed through individual time
+                            window frames. This rolling time window
+                            is defined by two characteristics:
+                        </p>
+
+                        <ul>
+                            <li>
+                                Time window length defined in seconds
+                            </li>
+
+                            <li>
+                                Data capture interval defined in seconds
+                            </li>
+                        </ul>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Step1.png"
+                                alt="Rolling time window processing"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Step 1: Processing data using a rolling
+                                time window.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1 - STEP 2
+                         ========================================== -->
+
+                    <section id="algorithm-1-step-2">
+
+                        <h3>Step 2: Data Preprocessing</h3>
+
+                        <p>
+                            Standardisation is applied to highlight
+                            important data.
+                        </p>
+
+                        <p>
+                            A segmentation mask is applied to remove noise:
+                        </p>
+
+                        <ul>
+                            <li>
+                                Data below the noise threshold is set to 0.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Weighted segmentation is applied by performing
+                            morphological transformation on the
+                            segmentation mask.
+                        </p>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Step2.png"
+                                alt="Data preprocessing and weighted segmentation"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Step 2: Data standardisation, segmentation,
+                                and morphological transformation.
+                            </figcaption>
+
+                        </figure>
+
+                        <p>
+                            Cross correlation is then applied to the
+                            weighted segmentation mask to identify
+                            vehicle instances in a given time window.
+                        </p>
+
+                        <p>
+                            Instances in the time window which closely
+                            match the lookup array will have higher
+                            correlation. The correlation matrix is used
+                            to distinguish vehicle instance points
+                            from noise.
+                        </p>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/output.gif"
+                                alt="Animated cross-correlation output showing vehicle instance identification"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Cross-correlation output for identifying
+                                vehicle instances within the time window.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1 - STEP 3
+                         ========================================== -->
+
+                    <section id="algorithm-1-step-3">
+
+                        <h3>Step 3: Vehicle Trajectory Estimation</h3>
+
+                        <p>
+                            Using vehicle points from the cross-correlation
+                            matrix:
+                        </p>
+
+                        <ul>
+                            <li>
+                                The algorithm iteratively creates
+                                trajectories for each entry/exit point
+                                in the time window.
+                            </li>
+
+                            <li>
+                                The algorithm chooses the appropriate
+                                trajectory by calculating the maximum
+                                number of vehicle points along the
+                                given trajectory.
+                            </li>
+                        </ul>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Step3.png"
+                                alt="Vehicle trajectory estimation from cross-correlation points"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Step 3: Estimating vehicle trajectories
+                                using detected vehicle points.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1 - STEP 4
+                         ========================================== -->
+
+                    <section id="algorithm-1-step-4">
+
+                        <h3>Step 4: Vehicle Classification</h3>
+
+                        <p>
+                            Feature extraction is conducted after the
+                            vehicle trajectory is estimated in a
+                            given time window.
+                        </p>
+
+                        <p>
+                            Statistical features are extracted along
+                            the estimated trajectory as well as
+                            parallel trajectories.
+                        </p>
+
+                        <p>
+                            A wide range of statistical features are
+                            extracted along the length of each
+                            trajectory. These include:
+                        </p>
+
+                        <ol>
+
+                            <li>
+                                <strong>Mean Amplitude:</strong>
+                                The average value of the vibration
+                                signal amplitudes.
+                            </li>
+
+                            <li>
+                                <strong>Standard Deviation (Std Dev)
+                                Amplitude:</strong>
+                                The measure of dispersion or spread
+                                of the vibration signal amplitudes
+                                around the mean.
+                            </li>
+
+                            <li>
+                                <strong>Skewness Amplitude:</strong>
+                                The measure of asymmetry of the
+                                distribution of vibration amplitudes.
+                            </li>
+
+                            <li>
+                                <strong>Kurtosis Amplitude:</strong>
+                                The measure of "peakness" or flatness
+                                of the vibration amplitude distribution.
+                            </li>
+
+                            <li>
+                                <strong>Entropy Amplitude:</strong>
+                                The measure of randomness or uncertainty
+                                in the vibration amplitude distribution.
+                                This could be useful in distinguishing
+                                noise and/or pedestrians.
+                            </li>
+
+                            <li>
+                                <strong>Autocorrelation:</strong>
+                                The measure of similarity between a
+                                signal and a delayed version of itself.
+                            </li>
+
+                        </ol>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Step4.png"
+                                alt="Vehicle classification feature extraction"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Step 4: Statistical feature extraction
+                                for vehicle classification.
+                            </figcaption>
+
+                        </figure>
+
+                        <p>
+                            A trained five-class model is used to
+                            classify the detected signal into one of
+                            the following classes:
+                        </p>
+
+                        <ul>
+                            <li>Heavy</li>
+                            <li>Medium</li>
+                            <li>Light</li>
+                            <li>Pedestrian</li>
+                            <li>Noise</li>
+                        </ul>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1 - STEP 5
+                         ========================================== -->
+
+                    <section id="algorithm-1-step-5">
+
+                        <h3>Step 5: Aggregate Vehicle Trajectories</h3>
+
+                        <p>
+                            Once the trajectories in each frame
+                            are identified, the trajectories are
+                            tracked from frame to frame to construct
+                            the complete vehicle trajectory across
+                            time frames.
+                        </p>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Step5.png"
+                                alt="Aggregation of vehicle trajectories across successive frames"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Step 5: Aggregating vehicle trajectories
+                                across successive time frames.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 1 - STEP 6
+                         ========================================== -->
+
+                    <section id="algorithm-1-step-6">
+
+                        <h3>Step 6: Prediction Refinement</h3>
+
+                        <p>
+                            Finally, the speed predictions of each
+                            frame are refined using the Weighted
+                            Moving Average Filter.
+                        </p>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/stream-to-prediction.gif"
+                                alt="Animated visualisation of vehicle tracking and refined speed predictions"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Step 6: Vehicle tracking and speed
+                                prediction refinement.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 2
+                         ========================================== -->
+
+                    <section id="algorithm-2">
+
+                        <h2>Algorithm 2</h2>
+
+                        <h3>
+                            Perpendicular Vehicle Crossing,
+                            Ingress/Regress Counting
+                        </h3>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/ProposedAlg2.png"
+                                alt="Algorithm 2 architecture for perpendicular vehicle crossing and ingress or regress counting"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Algorithm 2: Perpendicular vehicle crossing
+                                detection and ingress/regress counting.
+                            </figcaption>
+
+                        </figure>
+
+                        <p>
+                            Similar to the first algorithm, this algorithm
+                            processes a rolling time window and performs
+                            analysis across the time length and fibre
+                            length of the time window frame to:
+                        </p>
+
+                        <ol>
+                            <li>
+                                Count the number of vehicles crossing
+                                the fibre.
+                            </li>
+
+                            <li>
+                                Estimate the position at which the
+                                vehicle crosses the fibre.
+                            </li>
+
+                            <li>
+                                Estimate the speed range at which
+                                the vehicle crosses the fibre.
+                            </li>
+                        </ol>
+
+
+                        <h3>Detected Vehicle Attributes</h3>
+
+                        <p>
+                            The following attributes are detected
+                            for each vehicle:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <strong>Vehicle crossing time:</strong>
+                                This is taken as the time at which
+                                the maximum intensity is detected
+                                along the time axis.
+                            </li>
+
+                            <li>
+                                <strong>Vehicle crossing time range:</strong>
+                                This is the time range in which the
+                                vehicle signal is observed.
+                            </li>
+
+                            <li>
+                                <strong>Vehicle crossing position:</strong>
+                                This is the position along the fibre,
+                                in metres, at which the vehicle crosses
+                                the fibre. This is taken as the maximum
+                                intensity detected along the fibre length.
+                            </li>
+
+                            <li>
+                                <strong>Vehicle crossing direction:</strong>
+                                This is the direction in which the
+                                vehicle is travelling relative to the
+                                fibre. This is estimated based on the
+                                crossing position of the vehicle
+                                along the fibre.
+                            </li>
+
+                            <li>
+                                <strong>Vehicle speed range:</strong>
+                                The estimated lower and upper speed
+                                range of the vehicles. An average vehicle
+                                length is taken as 4.9 to 7.5 metres.
+                                Given the estimated vehicle crossing
+                                time range, the lower and upper bounds
+                                of speed are calculated.
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 2 - TIME SIGNAL ANALYSIS
+                         ========================================== -->
+
+                    <section id="algorithm-2-time">
+
+                        <h3>Step 2: Time Signal Analysis</h3>
+
+                        <p>
+                            The average intensity of detected signals
+                            is analysed over time for vehicle counting
+                            and identification.
+                        </p>
+
+                        <p>
+                            The algorithm detects isolated peaks along
+                            the time domain, resulting in dynamic
+                            thresholds, given that a signal peak
+                            is above the noise floor threshold.
+                        </p>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Alg2_Step2.png"
+                                alt="Time-domain signal analysis for vehicle counting and identification"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Algorithm 2: Time signal analysis and
+                                vehicle identification.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+
+                    <!-- ==========================================
+                         ALGORITHM 2 - FIBRE SIGNAL ANALYSIS
+                         ========================================== -->
+
+                    <section id="algorithm-2-fibre">
+
+                        <h3>Step 3: Fibre Signal Analysis</h3>
+
+                        <p>
+                            The average intensity of detected signals
+                            is also analysed over the length of
+                            the fibre to estimate the vehicle
+                            position along the fibre.
+                        </p>
+
+                        <figure class="project-figure">
+
+                            <img
+                                src="../assets/intelligent-fiber-sensing/Alg2_Step3.png"
+                                alt="Fibre signal analysis for estimating vehicle crossing position"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Algorithm 2: Fibre signal analysis for
+                                estimating vehicle crossing position.
+                            </figcaption>
+
+                        </figure>
+
+                    </section>
+
+                </div>
+
+
+                <!-- ==============================================
+                     PROJECT SIDEBAR
+                     ============================================== -->
+
+                <aside class="sidebar">
+
+                    <h3>Project Topics</h3>
+
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Fibre Optic Sensing</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Signal Processing</span>
+
+                    <h3 class="sidebar-heading">
+                        Project Navigation
+                    </h3>
+
+                    <nav class="project-nav" aria-label="Project sections">
+
+                        <a href="#overview">
+                            Project Overview
+                        </a>
+
+                        <a href="#architecture">
+                            Algorithm Architecture
+                        </a>
+
+                        <a href="#algorithm-1">
+                            Algorithm 1
+                        </a>
+
+                        <a href="#algorithm-2">
+                            Algorithm 2
+                        </a>
+
+                    </nav>
+
+
+                    <h3 class="sidebar-heading">
+                        Portfolio
+                    </h3>
+
+                    <a class="plainlink" href="../index.html#projects">
+                        ← Back to portfolio
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
+
+    <footer>
+        <div class="container">
+
+            <span>
+                © <span id="year">2026</span> · Mariam Abdullah
+            </span>
+
+            <a class="plainlink" href="../index.html#projects">
+                Explore projects ↑
+            </a>
+
+        </div>
+    </footer>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+         ====================================================== -->
+
+    <script>
+        document.getElementById('year').textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

@@ -1,2 +1,802 @@
+
+/* ==========================================================
+   1. IMPORT FONTS
+   ========================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-:root{--bg:#f8fafc;--ink:#10243a;--muted:#5b6d7f;--line:#dfe7ec;--accent:#0d766d;--accent-2:#d7f4eb;--white:#fff;--shadow:0 12px 40px rgba(20,55,72,.07)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}.container{max-width:1100px;padding:0 25px;margin:auto}.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font-family:'Space Grotesk',sans-serif;font-size:1.12rem;font-weight:700;letter-spacing:-.04em}.logo span{color:var(--accent)}.navlinks{display:flex;gap:30px;font-size:.93rem;font-weight:600}.hero{padding:95px 0 78px}.eyebrow{font-size:.76rem;letter-spacing:.14em;font-weight:700;color:var(--accent);text-transform:uppercase}.hero h1{font:700 clamp(2.7rem,6vw,5.4rem)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.055em;max-width:920px;margin:16px 0 24px}.lede{font-size:1.15rem;color:var(--muted);max-width:735px;margin:0 0 28px}.actions{display:flex;flex-wrap:wrap;gap:13px}.btn{display:inline-flex;justify-content:center;align-items:center;background:var(--accent);color:#fff!important;font-weight:700;font-size:.92rem;border-radius:9px;padding:12px 21px}.btn.secondary{background:#fff;color:var(--ink)!important;border:1px solid var(--line)}.btn:hover{filter:brightness(.95)}.section{padding:52px 0 75px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.section h2,.page h1{font:700 clamp(1.8rem,3vw,2.7rem)/1.14 'Space Grotesk',sans-serif;letter-spacing:-.045em;margin:8px 0}.section-intro{color:var(--muted);max-width:680px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.project-card{display:block;background:var(--white);border:1px solid var(--line);overflow:hidden;border-radius:15px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}.project-card:hover{transform:translateY(-4px);box-shadow:0 19px 40px rgba(20,55,72,.12)}.project-card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#e5f1f1}.card-body{padding:23px}.kicker{font-size:.77rem;color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase}.project-card h3{font:700 1.45rem/1.25 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin:7px 0 10px}.project-card p{color:var(--muted);margin:0 0 15px;font-size:.96rem}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{background:#edf4f5;border:1px solid #e1ebec;padding:5px 10px;border-radius:25px;font-size:.73rem;font-weight:700;color:#3d6265}.view{display:block;font-weight:700;color:var(--accent);margin-top:21px;font-size:.9rem}.about-panel{background:#fff;border:1px solid var(--line);border-radius:15px;padding:35px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.about-panel h2{margin-top:0}.muted{color:var(--muted)}.page{padding:64px 0 88px}.back{display:inline-block;color:var(--accent);font-weight:700;font-size:.92rem;margin-bottom:28px}.page h1{font-size:clamp(2.5rem,5vw,4.3rem);max-width:900px}.page-lede{font-size:1.18rem;color:var(--muted);max-width:750px;margin:18px 0 22px}.featured{width:100%;display:block;border-radius:15px;border:1px solid var(--line);margin-top:40px;background:#e5f1f1}.figcaption{font-size:.82rem;color:var(--muted);margin:9px 0 32px}.article{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:65px}.article section{margin-bottom:35px}.article h2{font:700 1.35rem 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin:0 0 11px}.article p{color:#3d5061;margin-top:0}.sidebar{background:white;border:1px solid var(--line);padding:20px;border-radius:14px;height:max-content;position:sticky;top:96px}.sidebar h3{font-size:.85rem;margin:0 0 12px}.sidebar .tag{display:inline-block;margin:0 4px 8px 0}.note{border-left:3px solid var(--accent);background:#eff8f6;padding:16px 19px;border-radius:0 8px 8px 0;color:#315e58;font-size:.9rem}footer{border-top:1px solid var(--line);background:#fff;padding:32px 0;color:var(--muted);font-size:.87rem}footer .container{display:flex;justify-content:space-between;gap:20px}.plainlink{color:var(--accent);font-weight:700}a:focus-visible{outline:3px solid #50b8a9;outline-offset:3px}@media(max-width:760px){.hero{padding:65px 0 48px}.grid,.about-panel,.article{grid-template-columns:1fr}.nav{min-height:64px}.navlinks{gap:15px;font-size:.84rem}.article{gap:5px}.sidebar{position:static}.section{padding:35px 0 60px}footer .container{flex-direction:column}.about-panel{padding:24px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
+
+
+/* ==========================================================
+   2. GLOBAL VARIABLES
+   ========================================================== */
+
+:root {
+    --bg: #f8fafc;
+    --ink: #10243a;
+    --muted: #5b6d7f;
+    --line: #dfe7ec;
+    --accent: #0d766d;
+    --accent-2: #d7f4eb;
+    --white: #fff;
+
+    --shadow: 0 12px 40px rgba(20, 55, 72, 0.07);
+}
+
+
+/* ==========================================================
+   3. GENERAL STYLING
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', Arial, sans-serif;
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 25px;
+    margin: auto;
+}
+
+
+/* ==========================================================
+   4. NAVIGATION BAR
+   ========================================================== */
+
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.navlinks {
+    display: flex;
+    gap: 30px;
+    font-size: 0.93rem;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   5. HERO SECTION
+   ========================================================== */
+
+.hero {
+    padding: 95px 0 78px;
+}
+
+/* Side-by-side layout for introduction and profile photo */
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+/* Small uppercase text above hero heading */
+
+.eyebrow {
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+/* Main hero heading */
+
+.hero h1 {
+    font: 700 clamp(2.7rem, 5vw, 4.5rem)/1.08
+          'Space Grotesk', sans-serif;
+
+    letter-spacing: -0.055em;
+    max-width: 920px;
+    margin: 16px 0 24px;
+}
+
+/* Introduction paragraph */
+
+.lede {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 735px;
+    margin: 0 0 28px;
+}
+
+
+/* ==========================================================
+   6. HERO PROFILE PHOTO
+   ========================================================== */
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+/* Circular profile image */
+
+.profile-image {
+    display: block;
+
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+
+    /* Crop image into a circle */
+    border-radius: 50%;
+
+    /* Crop without stretching the image */
+    object-fit: cover;
+    object-position: center;
+
+    /* Subtle border */
+    border: 4px solid rgba(255, 255, 255, 0.7);
+
+    /* Soft shadow */
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ==========================================================
+   7. BUTTONS
+   ========================================================== */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--accent);
+    color: #fff !important;
+
+    font-weight: 700;
+    font-size: 0.92rem;
+
+    border-radius: 9px;
+    padding: 12px 21px;
+}
+
+.btn.secondary {
+    background: #fff;
+    color: var(--ink) !important;
+    border: 1px solid var(--line);
+}
+
+.btn:hover {
+    filter: brightness(0.95);
+}
+
+
+/* ==========================================================
+   8. GENERAL SECTIONS
+   ========================================================== */
+
+.section {
+    padding: 52px 0 75px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.section h2,
+.page h1 {
+    font: 700 clamp(1.8rem, 3vw, 2.7rem)/1.14
+          'Space Grotesk', sans-serif;
+
+    letter-spacing: -0.045em;
+    margin: 8px 0;
+}
+
+.section-intro {
+    color: var(--muted);
+    max-width: 680px;
+}
+
+
+/* ==========================================================
+   9. PROJECT GRID
+   ========================================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* ==========================================================
+   10. PROJECT CARDS
+   ========================================================== */
+
+.project-card {
+    display: block;
+
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+
+    overflow: hidden;
+    box-shadow: var(--shadow);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 19px 40px rgba(20, 55, 72, 0.12);
+}
+
+/* Project thumbnail */
+
+.project-card img {
+    width: 100%;
+    display: block;
+
+    aspect-ratio: 16 / 9;
+    object-fit: center;
+
+    background: #ffffff;
+    padding: 15px;
+}
+
+/* Card content */
+
+.card-body {
+    padding: 23px;
+}
+
+.kicker {
+    font-size: 0.77rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    font: 700 1.45rem/1.25 'Space Grotesk', sans-serif;
+    letter-spacing: -0.035em;
+    margin: 7px 0 10px;
+}
+
+.project-card p {
+    color: var(--muted);
+    margin: 0 0 15px;
+    font-size: 0.96rem;
+}
+
+
+/* ==========================================================
+   11. PROJECT TAGS
+   ========================================================== */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #edf4f5;
+    border: 1px solid #e1ebec;
+
+    padding: 5px 10px;
+    border-radius: 25px;
+
+    font-size: 0.73rem;
+    font-weight: 700;
+    color: #3d6265;
+}
+
+.view {
+    display: block;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 21px;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================
+   12. ABOUT SECTION
+   ========================================================== */
+
+.about-panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+
+    padding: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.about-panel h2 {
+    margin-top: 0;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+
+/* ==========================================================
+   13. INDIVIDUAL PROJECT PAGES
+   ========================================================== */
+
+.page {
+    padding: 64px 0 88px;
+}
+
+.back {
+    display: inline-block;
+    color: var(--accent);
+
+    font-weight: 700;
+    font-size: 0.92rem;
+
+    margin-bottom: 28px;
+}
+
+.page h1 {
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+    max-width: 900px;
+}
+
+.page-lede {
+    font-size: 1.18rem;
+    color: var(--muted);
+
+    max-width: 750px;
+    margin: 18px 0 22px;
+}
+
+
+/* ==========================================================
+   14. PROJECT IMAGES & FIGURES
+   ========================================================== */
+
+.featured {
+    width: 100%;
+    display: block;
+
+    border-radius: 15px;
+    border: 1px solid var(--line);
+
+    margin-top: 40px;
+    background: #ffffff;
+}
+
+.figcaption {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 9px 0 32px;
+}
+
+
+/* ==========================================================
+   15. PROJECT ARTICLE LAYOUT
+   ========================================================== */
+
+.article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 65px;
+}
+
+.article section {
+    margin-bottom: 35px;
+}
+
+.article h2 {
+    font: 700 1.35rem 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+    margin: 0 0 11px;
+}
+
+.article p {
+    color: #3d5061;
+    margin-top: 0;
+}
+
+
+/* ==========================================================
+   16. PROJECT SIDEBAR
+   ========================================================== */
+
+.sidebar {
+    background: white;
+    border: 1px solid var(--line);
+
+    padding: 20px;
+    border-radius: 14px;
+
+    height: max-content;
+
+    position: sticky;
+    top: 96px;
+}
+
+.sidebar h3 {
+    font-size: 0.85rem;
+    margin: 0 0 12px;
+}
+
+.sidebar .tag {
+    display: inline-block;
+    margin: 0 4px 8px 0;
+}
+
+
+/* ==========================================================
+   17. INFORMATION NOTES
+   ========================================================== */
+
+.note {
+    border-left: 3px solid var(--accent);
+    background: #ffffff;
+
+    padding: 16px 19px;
+    border-radius: 0 8px 8px 0;
+
+    color: #315e58;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================
+   18. FOOTER
+   ========================================================== */
+
+footer {
+    border-top: 1px solid var(--line);
+    background: #fff;
+
+    padding: 32px 0;
+
+    color: var(--muted);
+    font-size: 0.87rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.plainlink {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   19. ACCESSIBILITY
+   ========================================================== */
+
+a:focus-visible {
+    outline: 3px solid #50b8a9;
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   20. RESPONSIVE DESIGN - TABLETS
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    /* Stack hero text and photo */
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* Show profile photo above introduction */
+    .hero-photo {
+        order: -1;
+    }
+
+    .profile-image {
+        max-width: 240px;
+    }
+
+}
+
+
+/* ==========================================================
+   21. RESPONSIVE DESIGN - MOBILE
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    /* Hero */
+    .hero {
+        padding: 65px 0 48px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 8vw, 3.5rem);
+    }
+
+    /* Project grid, about section and articles */
+    .grid,
+    .about-panel,
+    .article {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navigation */
+    .nav {
+        min-height: 64px;
+    }
+
+    .navlinks {
+        gap: 15px;
+        font-size: 0.84rem;
+    }
+
+    /* Articles */
+    .article {
+        gap: 5px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    /* Sections */
+    .section {
+        padding: 35px 0 60px;
+    }
+
+    /* Footer */
+    footer .container {
+        flex-direction: column;
+    }
+
+    /* About panel */
+    .about-panel {
+        padding: 24px;
+    }
+
+}
+
+
+/* ==========================================================
+   22. REDUCED MOTION ACCESSIBILITY
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .project-card {
+        transition: none;
+    }
+
+}
+
+
+/* ==========================================================
+   PROJECT ARTICLE - TECHNICAL CONTENT
+   ========================================================== */
+
+/* Prevent content from overflowing the article grid */
+
+.article-content {
+    min-width: 0;
+}
+
+/* Technical subsection headings */
+
+.article h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+
+    margin: 25px 0 14px;
+}
+
+/* Lists in project articles */
+
+.article ul,
+.article ol {
+    color: #3d5061;
+    padding-left: 25px;
+    margin: 12px 0 22px;
+    line-height: 1.8;
+}
+
+.article li {
+    margin-bottom: 10px;
+}
+
+.article li strong {
+    color: var(--ink);
+}
+
+/* More comfortable spacing between sections */
+
+.article section {
+    margin-bottom: 48px;
+    scroll-margin-top: 105px;
+}
+
+.article p {
+    margin-bottom: 16px;
+}
+
+
+/* ==========================================================
+   PROJECT FIGURES & ANIMATIONS
+   ========================================================== */
+
+.project-figure {
+    margin: 28px 0 32px;
+    padding: 18px;
+
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+/* Display images completely without cropping */
+
+.project-figure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+/* Figure captions */
+
+.project-figure figcaption {
+    margin-top: 15px;
+
+    font-size: 0.83rem;
+    line-height: 1.6;
+    color: var(--muted);
+
+    text-align: center;
+}
+
+/* Main featured animation */
+
+.project-featured {
+    max-width: 100%;
+    margin: 40px 0 50px;
+}
+
+.project-featured img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   PROJECT SIDEBAR NAVIGATION
+   ========================================================== */
+
+.sidebar-heading {
+    margin-top: 28px !important;
+}
+
+.project-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-nav a {
+    display: block;
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--muted);
+
+    transition: color 0.2s;
+}
+
+.project-nav a:hover {
+    color: var(--accent);
+}
+
+
+/* ==========================================================
+   RESPONSIVE TECHNICAL CONTENT
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    .project-figure {
+        padding: 10px;
+        margin: 20px 0 28px;
+    }
+
+    .article section {
+        margin-bottom: 35px;
+    }
+
+    .project-nav {
+        gap: 8px;
+    }
+
+}
+

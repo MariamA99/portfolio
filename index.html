@@ -1,4 +1,401 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Research portfolio showcasing machine learning, signal processing and experimental communications projects."><title>Home | Research Portfolio</title><link rel="stylesheet" href="style.css"></head><body><header class="topbar"><nav class="container nav" aria-label="Main navigation"><a class="logo" href="index.html">Research<span>.</span>Portfolio</a><div class="navlinks"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></div></nav></header><main><section class="hero"><div class="container"><div class="eyebrow">Research · Machine Learning · Engineering</div><h1>Turning complex signals into useful insights.</h1><p class="lede">Hi, I'm <strong>Your Name</strong>. My work focuses on machine learning, signal processing, and experimental high-frequency communication systems. Explore selected projects and the methods behind them.</p><div class="actions"><a class="btn" href="#projects">Explore my projects →</a><a class="btn secondary" href="#contact">Get in touch</a></div></div></section><section id="projects" class="section"><div class="container"><div class="section-heading"><div><div class="eyebrow">Selected work</div><h2>Featured projects</h2><p class="section-intro">A collection of research and applied engineering projects, covering the problem, technical approach, and experimental or numerical evaluation.</p></div></div><div class="grid"><a class="project-card" href="projects/modulation-recognition.html"><img src="assets/amr.svg" alt="Illustrative graphic for Automatic Modulation Recognition" loading="lazy"><div class="card-body"><div class="kicker">Machine Learning · Communications</div><h3>Automatic Modulation Recognition</h3><p>Learning to identify modulation formats from received signals in coherent and non-coherent communication systems.</p><div class="tags"><span class="tag">CNN</span><span class="tag">BiLSTM</span><span class="tag">THz communications</span></div><span class="view">Explore project ↗</span></div></a>
-<a class="project-card" href="projects/nonlinearity-compensation.html"><img src="assets/nonlinear.svg" alt="Illustrative graphic for Nonlinearity Compensation" loading="lazy"><div class="card-body"><div class="kicker">Signal Processing · Experimental Systems</div><h3>Nonlinearity Compensation</h3><p>Investigating how to mitigate strong nonlinear distortion in high-frequency communication links.</p><div class="tags"><span class="tag">Volterra equalisation</span><span class="tag">MATLAB</span><span class="tag">Experimental waveforms</span></div><span class="view">Explore project ↗</span></div></a>
-<a class="project-card" href="projects/frequency-estimation.html"><img src="assets/frequency.svg" alt="Illustrative graphic for ML-Based Frequency Estimation" loading="lazy"><div class="card-body"><div class="kicker">Machine Learning · Photonics</div><h3>ML-Based Frequency Estimation</h3><p>Estimating high-frequency signals using data-driven processing of measurement patterns.</p><div class="tags"><span class="tag">CNN</span><span class="tag">Frequency estimation</span><span class="tag">Experimental validation</span></div><span class="view">Explore project ↗</span></div></a>
-<a class="project-card" href="projects/direction-of-arrival.html"><img src="assets/doa.svg" alt="Illustrative graphic for Direction-of-Arrival Estimation" loading="lazy"><div class="card-body"><div class="kicker">Signal Processing · Estimation</div><h3>Direction-of-Arrival Estimation</h3><p>Exploring estimation of signal arrival direction using frequency-dependent antenna responses.</p><div class="tags"><span class="tag">DOA estimation</span><span class="tag">Frequency-diverse antennas</span><span class="tag">Numerical methods</span></div><span class="view">Explore project ↗</span></div></a></div></div></section><section id="about" class="section"><div class="container"><div class="about-panel"><div><div class="eyebrow">A little about me</div><h2>About</h2><p class="muted">I'm an electrical engineering researcher working at the intersection of machine learning and signal processing, with a focus on communication systems and real measured data.</p></div><div><h2>Areas of interest</h2><p class="muted">Deep learning · Statistical signal processing · Nonlinear equalisation · Numerical modelling · Experimental validation · Python · MATLAB</p><p class="muted">Update this section with your preferred professional summary, publications and CV link.</p></div></div></div></section><section class="section" id="contact"><div class="container"><div class="eyebrow">Contact</div><h2>Let's connect</h2><p class="section-intro">Replace the placeholder links below with your own public details before publishing.</p><div class="actions"><a class="btn" href="mailto:you@example.com">Email me</a><a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></section></main><footer><div class="container"><span>© <span id="year">2026</span> · Your Name · Research & Engineering</span><a class="plainlink" href="index.html#projects">Explore projects ↑</a></div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Research portfolio showcasing machine learning, signal processing and experimental communications projects.">
+
+    <title>Home | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="topbar">
+        <nav class="container nav" aria-label="Main navigation">
+
+            <a class="logo" href="index.html">
+                Research & Industry Portfolio
+            </a>
+
+            <div class="navlinks">
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-layout">
+
+                <!-- Left Side: Introduction -->
+                <div class="hero-content">
+                    <div class="eyebrow">
+                        Research · Machine Learning · Engineering
+                    </div>
+
+                    <h1>Communications and Data Science Engineer</h1>
+
+                    <p class="lede">
+                        Hi, I'm <strong>Mariam Abdullah</strong>.
+                        My work focuses on machine learning, signal processing,
+                        and experimental high-frequency communication systems.
+                        Explore my research and industry projects and the methods behind them.
+                    </p>
+
+                    <div class="actions">
+                        <a class="btn" href="#projects">Explore my projects →</a>
+                        <a class="btn secondary" href="#contact">Get in touch</a>
+                        <a class="btn secondary" href="files/Mariam_CV.pdf" download="Mariam_CV.pdf"> Download CV </a>
+
+                    </div>
+                </div>
+
+                <!-- Right Side: Circular Profile Photo -->
+                <div class="hero-photo">
+                    <img
+                        src="assets/headshot.jpeg"
+                        alt="Portrait of Your Name"
+                        class="profile-image"
+                    >
+                </div>
+
+            </div>
+        </section>
+        </section>
+        
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+
+                <div class="section-heading" style="margin-top: 70px;">
+                    <div>
+
+                        <div class="eyebrow">Selected work</div>
+
+                        <h2>Industry projects</h2>
+
+                        <p class="section-intro">
+                            A collection of industry-focused projects, encompassing applied machine learning, 
+                            data analytics, and the development of practical, data-driven solutions to real-world challenges.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="grid">
+
+                    <!-- Project 1: Intelligent Fiber Sensing -->
+                    <a class="project-card" href="projects/intelligent-fiber-sensing.html">
+
+                        <img
+                            src="assets/intelligent-fiber-sensing/intersection.gif"
+                            alt="Illustrative graphic for fiber sensing insights"
+                            loading="lazy"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="kicker">
+                                Machine Learning · Intelligent Transport Systems
+                            </div>
+
+                            <h3>Intelligent Fiber Sensing</h3>
+
+                            <p>
+                                Exploring the use of Telstra's existing optical fibre network for real-time vehicle detection and tracking, 
+                                supporting intelligent transport systems and data-driven infrastructure planning.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Fiber Optic Sensing</span>
+                                <span class="tag">Signal Processing</span>
+                            </div>
+
+                            <span class="view">Explore project ↗</span>
+
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="section-heading" style="margin-top: 70px;">
+                    <div>
+
+                        <div class="eyebrow">Selected work</div>
+
+                        <h2>Research projects</h2>
+
+                        <p class="section-intro">
+                            A collection of research and applied engineering projects,
+                            encompasing machine learning, signal processing, and terahertz wireless communications.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="grid">
+
+                    <!-- Project 1: Automatic Modulation Recognition -->
+                    <a class="project-card" href="projects/modulation-recognition.html">
+
+                        <img
+                            src="assets/AMR.svg"
+                            alt="Illustrative graphic for Automatic Modulation Recognition"
+                            loading="lazy"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="kicker">
+                                Machine Learning · Communications
+                            </div>
+
+                            <h3>Automatic Modulation Recognition</h3>
+
+                            <p>
+                                Adaptively identifying modulation formats from received
+                                signals in coherent and non-coherent communication systems.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">CNN</span>
+                                <span class="tag">BiLSTM</span>
+                                <span class="tag">Terahertz Communications</span>
+                            </div>
+
+                            <span class="view">Explore project ↗</span>
+
+                        </div>
+                    </a>
+
+
+                    <!-- Project 2: Nonlinearity Compensation -->
+                    <a class="project-card" href="projects/nonlinearity-compensation.html">
+
+                        <img
+                            src="assets/Nonlinearity.svg"
+                            alt="Illustrative graphic for Nonlinearity Compensation"
+                            loading="lazy"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="kicker">
+                                Signal Processing · Machine Learning · Communications
+                            </div>
+
+                            <h3>Nonlinearity Compensation</h3>
+
+                            <p>
+                                Investigating how to mitigate strong nonlinear distortion
+                                in terahertz communication links.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Volterra equalisation</span>
+                                <span class="tag">CNN</span>
+                                <span class="tag">Digital Signal Processing</span>
+                                <span class="tag">Terahertz Communications</span>
+                            </div>
+
+                            <span class="view">Explore project ↗</span>
+
+                        </div>
+                    </a>
+                    
+                    <!-- Project 3: Direction-of-Arrival Estimation -->
+                    <a class="project-card" href="projects/direction-of-arrival.html">
+
+                        <img
+                            src="assets/DOA.svg"
+                            alt="Illustrative graphic for Direction-of-Arrival Estimation"
+                            loading="lazy"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="kicker">
+                                Signal Processing · Estimation · Machine Learning
+                            </div>
+
+                            <h3>Direction-of-Arrival Estimation</h3>
+
+                            <p>
+                                Exploring estimation of signal arrival direction using
+                                frequency-dependent antenna responses.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">DOA Estimation</span>
+                                <span class="tag">Frequency-Diverse Antennas</span>
+                                <span class="tag">CNN</span>
+                            </div>
+
+                            <span class="view">Explore project ↗</span>
+
+                        </div>
+                    </a>
+
+                    <!-- Project 4: ML-Based IL Property Prediction -->
+                    <a class="project-card" href="projects/ionic-liquid-prediction.html">
+
+                        <img
+                            src="assets/ILproperties.svg"
+                            loading="lazy"
+                        >
+
+                        <div class="card-body">
+
+                            <div class="kicker">
+                                Machine Learning · Photonics
+                            </div>
+
+                            <h3>ML-Based Ionic Liquid Property Prediction</h3>
+
+                            <p>
+                                Estimating the chemichal properties of ionic liquids using  graph convolutional networks.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">GNN</span>
+                                <span class="tag">Frequency estimation</span>
+                                <span class="tag">Experimental validation</span>
+                            </div>
+
+                            <span class="view">Explore project ↗</span>
+
+                        </div>
+                    </a>
+
+
+                    
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+
+                <div class="about-panel">
+
+                    <div>
+
+                        <div class="eyebrow">A little about me</div>
+
+                        <h2>About</h2>
+
+                        <p class="muted">
+                            I am a PhD candidate in Electrical Engineering and work at Adelaide University, where I
+                            specialise in machine learning, signal processing, and high-frequency
+                            communication systems. My research combines computational modelling,
+                            data-driven algorithms, and experimental validation to develop and
+                            evaluate solutions to complex engineering problems.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>Areas of interest</h2>
+
+                        <p class="muted">
+                            Deep learning · Semi-supervised learning · Signal processing ·
+                            Nonlinear equalisation · Experimental validation · Python · MATLAB
+                        </p>
+
+                        <!-- <p class="muted">
+                            Update this section with your preferred professional
+                            summary, publications and CV link.
+                        </p> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+
+                <div class="eyebrow">Contact</div>
+
+                <h2>Let's connect</h2>
+
+                <p class="section-intro">
+                    email: mariammohammed1416@gmail.com
+                </p>
+
+                <div class="actions">
+
+                    <!-- <a class="btn" href="mailto:mariammohammed1416@gamil.com">
+                        Email me
+                    </a> -->
+
+                    <a
+                        class="btn secondary"
+                        href="https://linkedin.com/in/mariam-abdullah-b19786141"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn ↗
+                    </a>
+
+                    <a
+                        class="btn secondary"
+                        href="https://scholar.google.com/citations?user=w2zbA9cAAAAJ&hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Scholar ↗
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <span>
+                © <span id="year">2026</span> · Mariam Abdullah
+            </span>
+
+            <a class="plainlink" href="index.html#projects">
+                Explore projects ↑
+            </a>
+
+        </div>
+    </footer>
+
+
+    <!-- Automatically Update Footer Year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
